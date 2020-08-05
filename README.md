@@ -1,3 +1,8 @@
+*Note, this fork has been modified from the original source. All changes are detailed in the files that were
+modified. Affected files:*
+- `skaffold.yaml`
+- `kubernetes-manifests/frontend.yaml`
+
 <p align="center">
 <img src="src/frontend/static/icons/Hipster_HeroLogoCyan.svg" width="300"/>
 </p>
