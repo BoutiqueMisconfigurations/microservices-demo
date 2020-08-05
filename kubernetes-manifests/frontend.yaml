@@ -11,7 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+#
+# THIS FILE HAS BEEN MODIFIED FROM THE GCP ORIGINAL.
+# The changes are:
+#   - added the frontend-serviceaccount ServiceAccount
+#   - serviceAccountName was added to the Deployment
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: frontend-serviceaccount
+  labels:
+    app: frontend
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,6 +38,7 @@ spec:
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
+      serviceAccountName: frontend-serviceaccount # This line was added from the GCP Source code 
       containers:
         - name: server
           image: frontend

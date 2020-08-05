@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-apiVersion: skaffold/v1beta2
+# THIS FILE HAS BEEN MODIFIED FROM THE GCP ORIGINAL. The apiVersion has
+# been updated from v1beta2 to v2beta5
+apiVersion: skaffold/v2beta5
 kind: Config
 build:
   artifacts:
